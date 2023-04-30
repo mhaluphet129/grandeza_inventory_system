@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grandeza_inventory_system/screens/home.dart';
 import 'package:grandeza_inventory_system/utilities/initialize.dart';
 import 'package:grandeza_inventory_system/screens/user/auth.dart';
 
@@ -11,7 +12,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => Initialize());
       case '/auth':
         return MaterialPageRoute(builder: (_) => Auth());
-
+      case '/home':
+        return MaterialPageRoute(builder: (_) => Home());
       default:
         return _error404();
     }

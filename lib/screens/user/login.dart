@@ -54,7 +54,9 @@ class _Login extends State<Login> {
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/home');
+              },
               child: const Text(
                 'Login',
                 style: TextStyle(fontSize: 25),
