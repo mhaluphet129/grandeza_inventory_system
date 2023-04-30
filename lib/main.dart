@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Grandeza Inventory System',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Nunito'),
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.generateRoute,
     );

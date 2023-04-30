@@ -3,15 +3,20 @@ import 'package:flutter_svg/svg.dart';
 
 class Tabs extends StatefulWidget {
   Map<String, dynamic>? tabs;
-  Function? onChanged;
-  Tabs({Key? key, required this.tabs, this.onChanged}) : super(key: key);
+  int? selectedIndex;
+  Function onChanged;
+  Tabs(
+      {Key? key,
+      required this.tabs,
+      this.selectedIndex,
+      required this.onChanged})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _Tabs();
 }
 
 class _Tabs extends State<Tabs> {
-  int selectedIndex = 0;
   @override
   void initState() {
     super.initState();
@@ -26,11 +31,12 @@ class _Tabs extends State<Tabs> {
                 icon: e.value['icon'],
                 label: e.key,
                 onClick: () {
+                  widget.onChanged(e.value['index']);
                   setState(() {
-                    selectedIndex = e.value['index'];
+                    widget.selectedIndex = e.value['index'];
                   });
                 },
-                selected: selectedIndex == e.value['index']))
+                selected: widget.selectedIndex == e.value['index']))
             .toList()
       ],
     );
@@ -60,7 +66,6 @@ class TabMenu extends StatelessWidget {
           child: Material(
             color: Colors.transparent,
             child: InkWell(
-                splashColor: Colors.white30,
                 onTap: () => onClick(),
                 child: Row(
                   children: [
