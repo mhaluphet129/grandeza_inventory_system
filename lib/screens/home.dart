@@ -28,6 +28,12 @@ class _Home extends State<Home> with TickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
 

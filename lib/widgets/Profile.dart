@@ -27,6 +27,12 @@ class _Profile extends State<Profile> with TickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 5),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const PESO = "₱";
-Color SUCCESS = Color(0xff10A679);
+Color SUCCESS = const Color(0xff10A679);
 
 Map<String, dynamic> mainMenus = {
   "Dashboard": {
@@ -40,3 +40,7 @@ Map<String, dynamic> mainMenus = {
     "index": 6
   },
 };
+
+Color defaultColor = const Color(0xff0D99FF);
+Color defaultGrey = const Color(0xffeeeeee);
+Color defaultGrey2 = const Color(0xff7E869E);
