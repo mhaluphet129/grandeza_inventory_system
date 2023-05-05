@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:grandeza_inventory_system/models/recentdelivery_model.dart';
+import 'package:grandeza_inventory_system/screens/deliveries/components/item_widgets.dart';
 import 'package:grandeza_inventory_system/utilities/constant.dart';
 import 'package:grandeza_inventory_system/utilities/mockData.dart';
 import 'package:grandeza_inventory_system/widgets/button.dart';
-import 'package:grandeza_inventory_system/widgets/item_widgets.dart';
 import 'package:intl/intl.dart';
 
 class DeliveriesPage extends StatefulWidget {
