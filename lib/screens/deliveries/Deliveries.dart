@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grandeza_inventory_system/models/recentdelivery_model.dart';
+import 'package:grandeza_inventory_system/models/recent_delivery.dart';
 import 'package:grandeza_inventory_system/screens/deliveries/components/item_widgets.dart';
 import 'package:grandeza_inventory_system/utilities/constant.dart';
 import 'package:grandeza_inventory_system/utilities/mockData.dart';
@@ -17,7 +17,6 @@ class _DeliveriesPage extends State<DeliveriesPage> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    String _label = "";
 
     openModal(String type, dynamic args) {
       late ItemWidget _widget;

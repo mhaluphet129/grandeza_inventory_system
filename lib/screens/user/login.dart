@@ -57,9 +57,13 @@ class _Login extends State<Login> {
               onPressed: () {
                 Navigator.pushNamed(context, '/home');
               },
-              child: const Text(
-                'Login',
-                style: TextStyle(fontSize: 25),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("LOGIN"),
+                  SizedBox(width: 20),
+                  Icon(Icons.login_rounded)
+                ],
               ),
             ),
           ),

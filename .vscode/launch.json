@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "debug",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "debug_macos",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "args": ["-d", "macos"]
+    },
+    {
+      "name": "debug_chrome",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "args": ["-d", "chrome", "--web-renderer", "html"]
+    }
+  ]
+  // "compounds": [
+  //   {
+  //     "name": "Chrome + Mobile (Office PC config)",
+  //     "configurations": ["debug_chrome", "Alli-emulator"]
+  //   }
+  // ]
+}

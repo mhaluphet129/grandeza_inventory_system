@@ -1,5 +1,5 @@
 import 'package:grandeza_inventory_system/models/items.dart';
-import 'package:grandeza_inventory_system/models/recentdelivery_model.dart';
+import 'package:grandeza_inventory_system/models/recent_delivery.dart';
 import 'package:grandeza_inventory_system/models/sales.dart';
 
 List<Items> items = [

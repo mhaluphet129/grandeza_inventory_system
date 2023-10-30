@@ -74,19 +74,20 @@ class CustomInput extends StatelessWidget {
           child: Text(
             label,
             style: const TextStyle(
-                fontSize: 25, fontFamily: 'Nunito', color: Colors.white),
+                fontSize: 20, fontFamily: 'Nunito', color: Colors.white),
           ),
         ),
         TextFormField(
-          style: const TextStyle(color: Colors.white, fontSize: 20),
+          style: const TextStyle(color: Colors.white, fontSize: 15),
           onChanged: onChanged,
           obscureText: password ?? false,
           decoration: InputDecoration(
+              labelStyle: TextStyle(letterSpacing: password ?? false ? 5 : 0),
               hintText: 'Enter your email',
               enabledBorder: OutlineInputBorder(
                 borderSide:
                     const BorderSide(width: 1, color: Color(0xffDBAD3F)),
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(5),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(

@@ -1,5 +1,9 @@
-import 'package:grandeza_inventory_system/models/items.dart';
+import 'items.dart';
+import 'package:json_annotation/json_annotation.dart';
 
+part 'sales.g.dart';
+
+@JsonSerializable()
 class Sales {
   String id;
   Items itemId;
@@ -14,19 +18,7 @@ class Sales {
       required this.date,
       required this.amount});
 
-  factory Sales.fromJson(Map<String, dynamic> json) => Sales(
-        id: json['_id'],
-        itemId: Items.fromJson(json["itemId"]),
-        quantity: int.parse(json['quantity']),
-        amount: double.parse(json['amount']),
-        date: DateTime.parse(json['createdAt']),
-      );
+  factory Sales.fromJson(Map<String, dynamic> json) => _$SalesFromJson(json);
 
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "itemId": itemId.toJson(),
-        "quantity": quantity,
-        "amount": amount,
-        "date": date.toIso8601String(),
-      };
+  Map<String, dynamic> toJson() => _$SalesToJson(this);
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grandeza_inventory_system/models/recentdelivery_model.dart';
+import 'package:grandeza_inventory_system/models/recent_delivery.dart';
 import 'package:grandeza_inventory_system/models/sales.dart';
 import 'package:grandeza_inventory_system/screens/dashboard/components/card.dart';
 import 'package:grandeza_inventory_system/utilities/constant.dart';
